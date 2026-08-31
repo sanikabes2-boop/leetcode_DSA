@@ -10,10 +10,14 @@ class Solution {
             if(rev > Integer.MAX_VALUE / 10 || (rev == Integer.MAX_VALUE / 10 && digit > 7)){
                 return 0;
             }
+/*2147483640 + 7 = 2147483647  ✅
+2147483640 + 8 = 2147483648  ❌ overflow*/
 
             if(rev < Integer.MIN_VALUE /10 || (rev == Integer.MIN_VALUE / 10 && digit < -8)){
                 return 0;
             }
+/*-2147483640 + (-8) = -2147483648  ✅
+-2147483640 + (-9) = -2147483649  ❌ overflow */
             rev = rev*10 + digit;
 
         }
