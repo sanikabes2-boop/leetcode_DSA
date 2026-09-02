@@ -10,7 +10,7 @@ class Solution {
             if (mapS[a] != mapT[b]) {
                 return false;
             }
-
+            // a ka numeric value = index here
             mapS[a] = i + 1;
             mapT[b] = i + 1;
         }
@@ -18,3 +18,10 @@ class Solution {
         return true;
     }
 }
+
+/*
+e g g
+1 2 2
+
+a d d
+1 2 2 */
